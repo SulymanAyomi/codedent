@@ -66,10 +66,10 @@ export default function Home() {
             Get Started
           </a>
           <a
-            href="#contact"
+            href="login"
             className="border border-bg-primary-o text-bg-primary-o  px-6 py-2 rounded-lg text-sm  transition-all duration-300 hidden lg:inline-block"
           >
-            Get Started
+            Login
           </a>
         </div>
 
@@ -98,10 +98,10 @@ export default function Home() {
               Get Started
             </a>
             <a
-              href="#contact"
+              href="/login"
               className="border border-bg-primary-o text-bg-primary-o  px-6 py-3 rounded-lg text-lg hover:bg-bg-brand/90 transition-all duration-300"
             >
-              Get Started
+              Login
             </a>
           </div>
         </div>
@@ -504,10 +504,10 @@ export function MobileMenu() {
             Get Started
           </a>
           <a
-            href="#contact"
+            href="/login"
             className="w-full border border-bg-primary-o text-bg-primary-o  px-6 py-2 rounded-lg text-sm  transition-all duration-300 "
           >
-            Get Started
+            Login
           </a>
         </div>
       </PopoverContent>
