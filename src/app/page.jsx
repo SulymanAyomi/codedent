@@ -4,6 +4,7 @@ import {
   FacebookIcon,
   FolderIcon,
   InstagramIcon,
+  MenuIcon,
   RefreshCcwIcon,
   ShieldIcon,
   Twitter,
@@ -49,6 +50,7 @@ export default function Home() {
         >
           Get Started
         </a>
+        <MobileMenu />
       </nav>
       {/* <!-- Hero Section --> */}
       <section
@@ -363,5 +365,48 @@ export default function Home() {
         <div>&copy; {new Date().getFullYear()} Coded. All rights reserved.</div>
       </footer>
     </div>
+  );
+}
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
+export function MobileMenu() {
+  return (
+    <Popover className="lg:hidden">
+      <PopoverTrigger asChild>
+        <button variant="ghost">
+          <MenuIcon className="size-6 text-gray-700 lg:hidden" />
+        </button>
+      </PopoverTrigger>
+      <PopoverContent className="w-full">
+        <div className="gap-4  flex flex-col">
+          <a href="#home" className="text-gray-700">
+            Home
+          </a>
+          <a href="#about" className="text-gray-700">
+            About
+          </a>
+          <a href="#testimonials" className="text-gray-700">
+            Testimonials
+          </a>
+          <a href="#FAQs" className="text-gray-700">
+            FAQs
+          </a>
+          <a href="#contact" className="text-gray-700">
+            Contact
+          </a>
+        </div>
+        <a
+          href="#contact"
+          className="bg-[#26524F] text-white px-6 py-2 rounded-lg text-sm hover:bg-bg-brand-text/90 transition-all duration-300 hidden lg:inline-block"
+        >
+          Get Started
+        </a>
+      </PopoverContent>
+    </Popover>
   );
 }
