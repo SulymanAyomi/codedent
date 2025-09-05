@@ -1,13 +1,17 @@
 import Image from "next/image";
 import {
+  Building2Icon,
   CirclePoundSterlingIcon,
   FacebookIcon,
+  FileIcon,
   FolderIcon,
   InstagramIcon,
   MenuIcon,
+  PoundSterling,
   RefreshCcwIcon,
   ShieldIcon,
   Twitter,
+  User2Icon,
   Zap,
 } from "lucide-react";
 import {
@@ -20,12 +24,22 @@ import {
 export default function Home() {
   return (
     <div className="font-sans text-gray-800 max-w-7xl mx-auto bg-[#FFF8F2]">
-      <nav className="py-3 flex items-start justify-between px-6">
+      <nav className="py-3 flex justify-between px-2 w-full items-center">
         <div className="flex flex-col">
-          <span className="text-xl font-bold">Coded</span>
-          <span className="text-sm text-gray-500 hidden lg:block">
-            Business solutions
-          </span>
+          {/* <span className="text-xl font-bold mb-0">CCTDD</span>
+          <span className="text-sm text-gray-500 -mt-1">
+            Enterprise Limited
+          </span> */}
+          <a href="/">
+            <Image
+              alt="logo"
+              src="/cctd_logo.png"
+              width={100}
+              height={100}
+              priority
+              asChild
+            />
+          </a>
         </div>
         <div className="gap-4 hidden lg:flex">
           <a href="#home" className="text-gray-700">
@@ -44,12 +58,21 @@ export default function Home() {
             Contact
           </a>
         </div>
-        <a
-          href="#contact"
-          className="bg-[#26524F] text-white px-6 py-2 rounded-lg text-sm hover:bg-bg-brand-text/90 transition-all duration-300 hidden lg:inline-block"
-        >
-          Get Started
-        </a>
+        <div className="hideen lg:flex items-center justify-center gap-3">
+          <a
+            href="#contact"
+            className="bg-[#26524F] text-white px-6 py-2 rounded-lg text-sm hover:bg-bg-brand-text/90 transition-all duration-300 hidden lg:inline-block"
+          >
+            Get Started
+          </a>
+          <a
+            href="#contact"
+            className="border border-bg-primary-o text-bg-primary-o  px-6 py-2 rounded-lg text-sm  transition-all duration-300 hidden lg:inline-block"
+          >
+            Get Started
+          </a>
+        </div>
+
         <MobileMenu />
       </nav>
       {/* <!-- Hero Section --> */}
@@ -59,18 +82,28 @@ export default function Home() {
       >
         <div className="flex-1 flex flex-col items-center justify-center text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-[#26524F]">
-            Cross-border payments made easy
+            Making international payments simple and secure
           </h1>
           <p className="text-lg md:text-xl mb-6 text-gray-500">
-            We help Nigerian businesses get paid by anyone, anywhere in the
-            world — at the best rates.
+            We provide business support and technology services that make it
+            easier for companies to receive payments from their international
+            clients. We use regulated payment providers and do not handle client
+            funds directly.
           </p>
-          <a
-            href="#contact"
-            className="bg-[#26524F] text-white px-6 py-3 rounded-lg text-lg hover:bg-bg-brand-text/90 transition-all duration-300"
-          >
-            Get Started
-          </a>
+          <div className="flex items-center justify-center gap-3">
+            <a
+              href="#contact"
+              className="bg-[#26524F] text-white px-6 py-3 rounded-lg text-lg hover:bg-bg-brand-text/90 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="#contact"
+              className="border border-bg-primary-o text-bg-primary-o  px-6 py-3 rounded-lg text-lg hover:bg-bg-brand/90 transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
         </div>
         <div className="text-center my-4 ">
           <h2 className="text-2xl font-semibold mb-10">
@@ -79,25 +112,23 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-[#26524F]">
               <span className="block text-3xl font-bold text-[#DF7A57]">
-                300+
+                20+
               </span>
-              Business customers
+              Customers
             </div>
             <div className="text-[#26524F]">
               <span className="block text-3xl font-bold text-[#DF7A57]">
-                5,000+
+                20+
               </span>
               Transactions completed
             </div>
-            <div className="text-[#26524F]">
-              <span className="block text-3xl font-bold text-[#DF7A57]">
-                ₦500M+
-              </span>
+            <div className="text-[#26524F] flex flex-col">
+              <span className="text-3xl font-bold text-[#DF7A57]">£3k+</span>
               Amount process
             </div>
             <div className="text-[#26524F]">
               <span className="block text-3xl font-bold text-[#DF7A57]">
-                10+
+                5+
               </span>
               Countries
             </div>
@@ -114,11 +145,12 @@ export default function Home() {
             Why Business choose us
           </h2>
           <p className="lg:max-w-2xl lg:mx-auto text-sm">
-            We exist to make international payments simple for Nigerian
-            businesses. Our commitment is to transparent pricing and the best
-            exchange rates, so you keep more of what you earn. We empower
-            businesses to grow beyond borders with faster transactions, lower
-            fees, and peace of mind.
+            At CCTDD Enterprise, our mission is to make international payments
+            simple, transparent, and reliable for businesses. We understand the
+            challenges companies face when trading across borders — from delayed
+            payments to unnecessary friction. That’s why we’ve built a solution
+            that empowers businesses to scale globally while keeping every
+            transaction secure and compliant.
           </p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 items-start justify-between">
@@ -150,6 +182,68 @@ export default function Home() {
               <p className="text-xs">
                 We do not touch your money directly. We use trusted payment
                 providers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="services"
+        className="py-8 lg:py-16 text-black text-center px-6 lg:px-32 rounded-2xl space-y-6 space-x-3 "
+      >
+        <div>
+          <h2 className="text-3xl font-semibold mb-3">Our Services</h2>
+          <p className="lg:max-w-2xl lg:mx-auto text-sm">
+            At CCTDD Enterprise, we offer payment services ranging from
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full gap-3 items-start justify-between">
+          <div className="flex h-full  gap-3 items-center justify-start rounded-md shadow-sm bg-white border p-6">
+            <div className="p-4">
+              <FileIcon className="text-bg-primary-o size-9" />
+            </div>
+            <div className="flex flex-col gap-2 items-start justify-start">
+              <p className="font-semibold">Invoice & Payment Creation</p>
+              <p className="text-sm text-start">
+                Businesses generate invoices or payment requests. Each invoice
+                includes a secure payment link powered by our technology.
+              </p>
+            </div>
+          </div>
+          <div className="flex h-full  gap-3 items-center justify-start rounded-md shadow-sm bg-white border p-3">
+            <div className="px-4">
+              <ShieldIcon className="text-bg-primary-o size-9" />
+            </div>
+            <div className="flex flex-col gap-2 items-start justify-start">
+              <p className="font-semibold">Regulated Payment Processing</p>
+              <p className="text-sm text-start">
+                Payments are processed by regulated providers, ensuring rigorous
+                financial and regulatory standards.
+              </p>
+            </div>
+          </div>
+          <div className="flex h-full  gap-3 items-center justify-start rounded-md shadow-sm bg-white border p-3">
+            <div className="px-4">
+              <Building2Icon className="text-bg-primary-o size-9" />
+            </div>
+            <div className="flex flex-col gap-2 items-start justify-start">
+              <p className="font-semibold">Direct Settlement to Businesses</p>
+              <p className="text-sm text-start">
+                Funds settle directly to the business account with the provider
+                or bank. CCTDD never holds or controls client funds.
+              </p>
+            </div>
+          </div>
+          <div className="flex h-full  gap-3 items-center justify-start rounded-md shadow-sm bg-white border p-3">
+            <div className="px-4">
+              <User2Icon className="text-bg-primary-o size-9" />
+            </div>
+            <div className="flex flex-col gap-2 items-start justify-start">
+              <p className="font-semibold">Our Role</p>
+              <p className="text-sm text-start">
+                We provide technology, reporting, and customer support for a
+                seamless process. Revenue comes from service fees or
+                subscriptions.
               </p>
             </div>
           </div>
@@ -355,11 +449,13 @@ export default function Home() {
           </div>
           <div>
             <p className="text-black font-semibold">Follow us</p>
-            <div className="flex gap-4 items-center justify-center mt-2">
-              <FacebookIcon className="size-5 text-bg-primary-o  cursor-pointer" />
+            <a
+              href="https://www.instagram.com/cctdd_enterpise/"
+              className="flex gap-4 items-center justify-center mt-2"
+            >
               <InstagramIcon className="size-5 text-bg-primary-o  cursor-pointer" />
-              <Twitter className="size-5 text-bg-primary-o  cursor-pointer" />
-            </div>
+              <p>cctdd_enterprise</p>
+            </a>
           </div>
         </div>
         <div>&copy; {new Date().getFullYear()} Coded. All rights reserved.</div>
@@ -376,13 +472,13 @@ import {
 
 export function MobileMenu() {
   return (
-    <Popover className="lg:hidden">
+    <Popover className="">
       <PopoverTrigger asChild>
         <button variant="ghost">
           <MenuIcon className="size-6 text-gray-700 lg:hidden" />
         </button>
       </PopoverTrigger>
-      <PopoverContent className="w-full">
+      <PopoverContent className="w-sm left-0 right-0 bg-bg-brand">
         <div className="gap-4  flex flex-col">
           <a href="#home" className="text-gray-700">
             Home
@@ -400,12 +496,20 @@ export function MobileMenu() {
             Contact
           </a>
         </div>
-        <a
-          href="#contact"
-          className="bg-[#26524F] text-white px-6 py-2 rounded-lg text-sm hover:bg-bg-brand-text/90 transition-all duration-300 hidden lg:inline-block"
-        >
-          Get Started
-        </a>
+        <div className="flex flex-col w-full items-center justify-center mt-4 gap-4 mb-1">
+          <a
+            href="#contact"
+            className="w-full bg-[#26524F] text-white px-6 py-2 rounded-lg text-sm hover:bg-bg-brand-text/90 transition-all duration-300 "
+          >
+            Get Started
+          </a>
+          <a
+            href="#contact"
+            className="w-full border border-bg-primary-o text-bg-primary-o  px-6 py-2 rounded-lg text-sm  transition-all duration-300 "
+          >
+            Get Started
+          </a>
+        </div>
       </PopoverContent>
     </Popover>
   );
