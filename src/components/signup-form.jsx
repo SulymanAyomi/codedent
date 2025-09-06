@@ -54,7 +54,10 @@ export function SignupForm({ className, ...props }) {
                 <Input id="password" type="password" required />
               </div>
               <div className="flex flex-col gap-3">
-                <Button type="submit" className="w-full">
+                <Button
+                  type="submit"
+                  className="w-full bg-[#26524F] text-white hover:bg-bg-brand-text/90 transition-all duration-300"
+                >
                   Sign up
                 </Button>
               </div>
