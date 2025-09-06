@@ -23,7 +23,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="font-sans text-gray-800 max-w-7xl mx-auto bg-[#FFF8F2]">
+    <div className=" text-gray-800 max-w-7xl mx-auto bg-[#FFF8F2]">
       <nav className="py-3 flex justify-between px-2 w-full items-center">
         <div className="flex flex-col">
           {/* <span className="text-xl font-bold mb-0">CCTDD</span>
@@ -37,24 +37,23 @@ export default function Home() {
               width={100}
               height={100}
               priority
-              asChild
             />
           </a>
         </div>
         <div className="gap-4 hidden lg:flex">
-          <a href="#home" className="text-gray-700">
+          <a href="/#home" className="text-gray-700">
             Home
           </a>
-          <a href="#about" className="text-gray-700">
+          <a href="/#about" className="text-gray-700">
             About
           </a>
-          <a href="#testimonials" className="text-gray-700">
+          <a href="/#testimonials" className="text-gray-700">
             Testimonials
           </a>
-          <a href="#FAQs" className="text-gray-700">
+          <a href="/#FAQs" className="text-gray-700">
             FAQs
           </a>
-          <a href="#contact" className="text-gray-700">
+          <a href="/contact-us" className="text-gray-700">
             Contact
           </a>
         </div>
@@ -278,6 +277,7 @@ export default function Home() {
           </blockquote>
         </div>
       </section>
+      {/* <!-- FAQ Section --> */}
       <section id="FAQs" className="rounded-xl lg:mt-8">
         <div className="flex flex-col items-start w-full px-5 py-4 gap-4">
           <h3 className="font-semibold text-xl text-center w-full">
@@ -348,79 +348,37 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <!-- FAQ Section --> */}\{/* <!-- Contact Form Section --> */}
-      <section id="contact" className="py-16  rounded-2xl px-6">
-        <h2 className="text-2xl font-semibold text-center mb-6">
-          Get Started Today
-        </h2>
-        <p className="text-center mb-10">
-          Tell us about your business and we’ll help you start accepting
-          payments globally.
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 ">
-          <div className="hidden lg:flex items-center justify-center w-full h-full">
-            <Image
-              src="/img1.jpg"
-              alt="Contact Illustration"
-              width={400}
-              height={400}
-              className="mx-auto rounded-lg shadow-lg object-cover"
-            />
-          </div>
-          <form
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
-            className="max-w-xl mx-auto space-y-4 bg-inherit border p-6 rounded-lg shadow"
-          >
-            <div className="flex flex-col items-start mb-3">
-              <h3 className="text-3xl font-semibold ">Send us a message.</h3>
-              <p className="text-gray-800 text-sm">
-                We will respond within 24 hours.
-              </p>
-            </div>
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              required
-              className="w-full border rounded px-4 py-2"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              required
-              className="w-full border rounded px-4 py-2"
-            />
-            <input
-              type="text"
-              name="business"
-              placeholder="Business Name / Type"
-              className="w-full border rounded px-4 py-2"
-            />
-            <textarea
-              name="message"
-              placeholder="Message (optional)"
-              className="w-full border rounded px-4 py-2"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-bg-brand-text text-white py-3 rounded-lg cursor-pointer hover:bg-bg-brand-text/90 transition-all duration-300"
-            >
-              Get Started
-            </button>
-            <p className="text-xs text-gray-500 mt-2">
-              We’ll never share your information.
+      {/* <!-- Contact Form Section --> */}
+      <section id="contact" className="px-3">
+        <div className="py-6 md:py-16 w-full rounded-xl px-4 bg-bg-brand-text text-white flex flex-col gap-3 md:flex-row justify-around">
+          <div className="">
+            <p className="font-semibold text-xl">
+              Ready to accept payments worldwide?
             </p>
-          </form>
+            <p className="text-sm text-center">
+              Let's help your business grow beyound borders. Schedule a meeting
+              with us today.
+            </p>
+          </div>
+          <div className="flex items-center justify-center">
+            <a
+              href="/contact-us"
+              className="border bg-bg-primary-o text-white border-bg-primary-o  px-6 py-2 rounded-lg text-sm  transition-all duration-300 "
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </section>
-      <footer className="py-6 px-6 text-center text-sm text-gray-500 ">
+      <footer className="pt-6 px-6 text-center text-sm text-gray-500 ">
         <div className="flex flex-col md:flex-row gap-6 items-start mb-4">
           <div className="flex flex-col justify-start items-start gap-2">
-            <span className="text-xl font-bold">Coded</span>
-            <span className="text-sm text-gray-500 ">Business solutions</span>
+            <div className="flex flex-col items-start">
+              <span className="text-xl font-bold mb-0 text-start text-black">
+                CCTDD
+              </span>
+              <span className="text-sm text-gray-500 ">Enterprise Limited</span>
+            </div>
             <p className="text-sm text-gray-700 mt-2 max-w-xs mx-auto text-start">
               We do not accept payments directly. We use trusted payment
               providers to handle transactions securely.
@@ -430,19 +388,19 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center  gap-4">
             <p className="text-black font-semibold">Quick links</p>
             <div className="flex flex-col gap-1 items-center justify-center flex-wrap mt-2">
-              <a href="#home" className="text-gray-700">
+              <a href="/#home" className="text-gray-700">
                 Home
               </a>
-              <a href="#about" className="text-gray-700">
+              <a href="/#about" className="text-gray-700">
                 About
               </a>
-              <a href="#testimonials" className="text-gray-700">
+              <a href="/#testimonials" className="text-gray-700">
                 Testimonials
               </a>
-              <a href="#FAQs" className="text-gray-700">
+              <a href="/#FAQs" className="text-gray-700">
                 FAQs
               </a>
-              <a href="#contact" className="text-gray-700">
+              <a href="/contact-us" className="text-gray-700">
                 Contact
               </a>
             </div>
@@ -458,7 +416,9 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div>&copy; {new Date().getFullYear()} Coded. All rights reserved.</div>
+        <div className="py-3 text-white bg-bg-brand-text ">
+          &copy; {new Date().getFullYear()} Coded. All rights reserved.
+        </div>
       </footer>
     </div>
   );
