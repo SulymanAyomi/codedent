@@ -24,31 +24,31 @@ const ContactUsPage = () => {
           </a>
         </div>
         <div className="gap-4 hidden lg:flex">
-          <a href="#home" className="text-gray-700">
+          <a href="/#home" className="text-gray-700">
             Home
           </a>
-          <a href="#about" className="text-gray-700">
+          <a href="/#about" className="text-gray-700">
             About
           </a>
-          <a href="#testimonials" className="text-gray-700">
+          <a href="/#testimonials" className="text-gray-700">
             Testimonials
           </a>
-          <a href="#FAQs" className="text-gray-700">
+          <a href="/#FAQs" className="text-gray-700">
             FAQs
           </a>
-          <a href="#contact" className="text-gray-700">
+          <a href="/#contact" className="text-gray-700">
             Contact
           </a>
         </div>
         <div className="hideen lg:flex items-center justify-center gap-3">
           <a
-            href="#contact"
+            href="/#contact"
             className="bg-[#26524F] text-white px-6 py-2 rounded-lg text-sm hover:bg-bg-brand-text/90 transition-all duration-300 hidden lg:inline-block"
           >
             Get Started
           </a>
           <a
-            href="login"
+            href="/login"
             className="border border-bg-primary-o text-bg-primary-o  px-6 py-2 rounded-lg text-sm  transition-all duration-300 hidden lg:inline-block"
           >
             Login
@@ -72,19 +72,19 @@ const ContactUsPage = () => {
           <div className="flex flex-col justify-center items-center  gap-4">
             <p className="text-black font-semibold">Quick links</p>
             <div className="flex flex-col gap-1 items-center justify-center flex-wrap mt-2">
-              <a href="#home" className="text-gray-700">
+              <a href="/#home" className="text-gray-700">
                 Home
               </a>
-              <a href="#about" className="text-gray-700">
+              <a href="/#about" className="text-gray-700">
                 About
               </a>
-              <a href="#testimonials" className="text-gray-700">
+              <a href="/#testimonials" className="text-gray-700">
                 Testimonials
               </a>
-              <a href="#FAQs" className="text-gray-700">
+              <a href="/#FAQs" className="text-gray-700">
                 FAQs
               </a>
-              <a href="#contact" className="text-gray-700">
+              <a href="/#contact" className="text-gray-700">
                 Contact
               </a>
             </div>

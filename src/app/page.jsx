@@ -440,25 +440,25 @@ export function MobileMenu() {
       </PopoverTrigger>
       <PopoverContent className="w-sm left-0 right-0 bg-bg-brand">
         <div className="gap-4  flex flex-col">
-          <a href="#home" className="text-gray-700">
+          <a href="/#home" className="text-gray-700">
             Home
           </a>
-          <a href="#about" className="text-gray-700">
+          <a href="/#about" className="text-gray-700">
             About
           </a>
-          <a href="#testimonials" className="text-gray-700">
+          <a href="/#testimonials" className="text-gray-700">
             Testimonials
           </a>
-          <a href="#FAQs" className="text-gray-700">
+          <a href="/#FAQs" className="text-gray-700">
             FAQs
           </a>
-          <a href="#contact" className="text-gray-700">
+          <a href="/#contact" className="text-gray-700">
             Contact
           </a>
         </div>
         <div className="flex flex-col w-full items-center justify-center mt-4 gap-4 mb-1">
           <a
-            href="#contact"
+            href="/#contact"
             className="w-full bg-[#26524F] text-white px-6 py-2 rounded-lg text-sm hover:bg-bg-brand-text/90 transition-all duration-300 "
           >
             Get Started
