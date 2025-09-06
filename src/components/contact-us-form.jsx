@@ -79,7 +79,7 @@ const ContactUsForm = () => {
                 </p>
                 {errors && (
                   <p className="text-center text-xs text-red-500">
-                    Something went wrong! Try again.
+                    Something went wrong! Please try again.
                   </p>
                 )}
               </div>
